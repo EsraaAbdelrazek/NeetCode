@@ -1,0 +1,28 @@
+class Solution {
+public:
+    vector<int> replaceElements(vector<int>& arr) {
+        int n = arr.size() ; 
+        if (arr.size() == 1) {
+            arr[0] = -1 ; 
+            return arr ; 
+        }
+    int mx = max (arr[n-1] , arr[n-2]) ; // 9 
+	int num = arr[n-1] ; //  9 
+	arr[n-1] = -1 ; // -1
+	arr[n-2] = num ;  // 9 
+	for (int i =n-3 ; i >=0 ;i--) {
+		num = arr[i] ;    // = 4  
+		arr [i] = mx ;  // 9 
+		mx = max (num , mx ) ; //  
+			
+		}
+        
+        
+        
+        
+        
+        return arr ; 
+    
+    }
+    
+};
